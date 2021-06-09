@@ -15,11 +15,17 @@ box2.addEventListener("click", () => {
 box3.style.borderRadius = "70%";
 box3.style.backgroundColor = "blue";
 
-//
+//array의 속성에는 forEach속성이 있습니다.
 array.forEach((item) => {
   const listEl = document.createElement("li");
-  listEl.classList.add("item");
-  listEl.innerText = `${item}`;
 
+  //li엘리먼트를 생성합니다.
+  listEl.classList.add("item");
+  //item이라는 class를 추가합니다
+  listEl.innerHTML = `
+  <h1>${item}</h1>
+  
+  `;
+  //ul (lists)의 자식에 listEl를 붙입니다.
   lists.appendChild(listEl);
 });
